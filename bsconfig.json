@@ -1,0 +1,11 @@
+{
+  "name": "@rescriptbr/radix-ui",
+  "bsc-flags": ["-bs-super-errors"],
+  "version": "1.0.0",
+  "sources": ["src"],
+  "bs-dependencies": ["@rescript/react"],
+  "reason": {
+    "react-jsx": 3
+  },
+  "refmt": 3
+}
