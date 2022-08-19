@@ -342,7 +342,11 @@ module Accordion = {
 
   module Header = {
     @react.component @module("@radix-ui/react-accordion")
-    external make: (~children: React.element, ~className: string=?) => React.element = "Header"
+    external make: (
+      ~children: React.element,
+      ~asChild: bool=?,
+      ~className: string=?,
+    ) => React.element = "Header"
   }
 
   module Trigger = {
