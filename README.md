@@ -3,7 +3,7 @@
   <br />
 </p>
 
-# ReScript React Flow
+# ReScript Radix UI
 
 [Radix UI](https://www.radix-ui.com/) bindings for ReScript.
 
