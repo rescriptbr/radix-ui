@@ -220,3 +220,146 @@ module NavigationMenu = {
     external make: (~className: string=?, ~forceMount: bool=?) => React.element = "Viewport"
   }
 }
+
+module Tooltip = {
+  module Provider = {
+    @react.component @module("@radix-ui/react-tooltip")
+    external make: (
+      ~children: React.element,
+      ~delayDuration: float=?,
+      ~skipDelayDuration: float=?,
+    ) => React.element = "Provider"
+  }
+
+  module Root = {
+    @react.component @module("@radix-ui/react-tooltip")
+    external make: (
+      ~defaultOpen: bool=?,
+      ~_open: bool=?,
+      ~onOpenChange: unit => unit=?,
+      ~delayDuration: float=?,
+      ~children: React.element,
+    ) => React.element = "Root"
+  }
+
+  module Trigger = {
+    @react.component @module("@radix-ui/react-tooltip")
+    external make: (~asChild: bool=?, ~children: React.element) => React.element = "Trigger"
+  }
+
+  module Content = {
+    @react.component @module("@radix-ui/react-tooltip")
+    external make: (
+      ~children: React.element,
+      ~asChild: bool=?,
+      ~ariaLabel: string=?,
+      ~portalled: bool=?,
+      ~side: [#top | #right | #left | #bottom]=?,
+      ~sideOffset: float=?,
+      ~align: [#start | #center | #end]=?,
+      ~alignOffset: float=?,
+      ~avoidCollisions: bool=?,
+      ~collisionsTolerance: float=?,
+      ~className: string=?,
+    ) => React.element = "Content"
+  }
+
+  module Arrow = {
+    @react.component @module("@radix-ui/react-tooltip")
+    external make: (
+      ~asChild: bool=?,
+      ~width: float=?,
+      ~height: float=?,
+      ~offset: float=?,
+      ~className: string=?,
+    ) => React.element = "Arrow"
+  }
+}
+
+module Tabs = {
+  module Root = {
+    @react.component @module("@radix-ui/react-tabs")
+    external make: (
+      ~children: React.element,
+      ~asChild: bool=?,
+      ~defaultValue: string=?,
+      ~value: string=?,
+      ~onValueChange: string => unit=?,
+      ~orientation: [#horizontal | #vertical]=?,
+      ~dir: [#ltr | #rtl]=?,
+      ~activationMode: [#automatic | #manual]=?,
+    ) => React.element = "Root"
+  }
+
+  module List = {
+    @react.component @module("@radix-ui/react-tabs")
+    external make: (
+      ~className: string=?,
+      ~children: React.element,
+      ~loop: bool=?,
+      ~asChild: bool=?,
+    ) => React.element = "List"
+  }
+
+  module Trigger = {
+    @react.component @module("@radix-ui/react-tabs")
+    external make: (
+      ~className: string=?,
+      ~children: React.element,
+      ~value: string=?,
+      ~disabled: bool=?,
+      ~asChild: bool=?,
+    ) => React.element = "Trigger"
+  }
+
+  module Content = {
+    @react.component @module("@radix-ui/react-tabs")
+    external make: (~children: React.element, ~value: string=?, ~asChild: bool=?) => React.element =
+      "Content"
+  }
+}
+
+module Accordion = {
+  module Root = {
+    @react.component @module("@radix-ui/react-accordion")
+    external make: (
+      ~children: React.element,
+      ~_type: [#single | #multiple],
+      ~value: string=?,
+      ~collapsible: bool=?,
+      ~defaultValue: string=?,
+    ) => React.element = "Root"
+  }
+
+  module Item = {
+    @react.component @module("@radix-ui/react-accordion")
+    external make: (
+      ~children: React.element,
+      ~className: string=?,
+      ~value: string,
+    ) => React.element = "Item"
+  }
+
+  module Header = {
+    @react.component @module("@radix-ui/react-accordion")
+    external make: (~children: React.element, ~className: string=?) => React.element = "Header"
+  }
+
+  module Trigger = {
+    @react.component @module("@radix-ui/react-accordion")
+    external make: (
+      ~asChild: bool=?,
+      ~className: string=?,
+      ~children: React.element,
+    ) => React.element = "Trigger"
+  }
+
+  module Content = {
+    @react.component @module("@radix-ui/react-accordion")
+    external make: (
+      ~asChild: bool=?,
+      ~className: string=?,
+      ~children: React.element,
+    ) => React.element = "Content"
+  }
+}
