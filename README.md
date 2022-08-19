@@ -26,7 +26,7 @@ yarn add @rescriptbr/react-flow
 ```json
 {
   "name": "your-project",
-  "bs-dependencies": ["@rescriptbr/react-flow"]
+  "bs-dependencies": ["@rescriptbr/radix-ui"]
 }
 ```
 
