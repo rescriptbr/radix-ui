@@ -1,0 +1,8 @@
+.DS_Store
+/node_modules/
+.merlin
+*.log
+/tests/
+/static/
+/example/
+/assets/
