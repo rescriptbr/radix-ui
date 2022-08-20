@@ -24,7 +24,7 @@ module Dialog = {
 
   module Overlay = {
     @react.component @module("@radix-ui/react-dialog")
-    external make: (~className: string=?, ~children: React.element) => React.element = "Overlay"
+    external make: (~className: string=?) => React.element = "Overlay"
   }
 
   module Content = {
