@@ -18,7 +18,7 @@ npm install --save @rescriptbr/radix-ui
 or yarn:
 
 ```
-yarn add @rescriptbr/react-flow
+yarn add @rescriptbr/radix-ui
 ```
 
 2. Add `@rescriptbr/radix-ui` as dependency to your `bsconfig.json`:
