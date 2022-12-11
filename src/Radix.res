@@ -214,6 +214,17 @@ module NavigationMenu = {
       ~children: React.element=?,
     ) => React.element = "Trigger"
   }
+  
+  module Link = {
+    @react.component @module("@radix-ui/react-navigation-menu")
+    external make: (
+      ~className: string=?,
+      ~asChild: bool=?,
+      ~active: bool=?,
+      ~onSelect: ReactEvent.Mouse.t => unit=?,
+      ~children: React.element,
+    ) => React.element = "Link"
+  }
 
   module Viewport = {
     @react.component @module("@radix-ui/react-navigation-menu")
