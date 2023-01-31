@@ -214,7 +214,7 @@ module NavigationMenu = {
       ~children: React.element=?,
     ) => React.element = "Trigger"
   }
-  
+
   module Link = {
     @react.component @module("@radix-ui/react-navigation-menu")
     external make: (
@@ -291,6 +291,7 @@ module Tabs = {
   module Root = {
     @react.component @module("@radix-ui/react-tabs")
     external make: (
+      ~className: string=?,
       ~children: React.element,
       ~asChild: bool=?,
       ~defaultValue: string=?,
@@ -334,6 +335,7 @@ module Accordion = {
   module Root = {
     @react.component @module("@radix-ui/react-accordion")
     external make: (
+      ~className: string=?,
       ~children: React.element,
       ~_type: [#single | #multiple],
       ~value: string=?,
@@ -375,6 +377,66 @@ module Accordion = {
       ~asChild: bool=?,
       ~className: string=?,
       ~children: React.element,
+    ) => React.element = "Content"
+  }
+}
+
+module Checkbox = {
+  module Root = {
+    @react.component @module("@radix-ui/react-checkbox")
+    external make: (
+      ~className: string=?,
+      ~asChild: bool=?,
+      ~defaultChecked: bool=?,
+      ~checked: bool,
+      ~onCheckedChange: bool => unit,
+      ~disabled: bool=?,
+      ~required: bool=?,
+      ~name: string=?,
+      ~value: string=?,
+      ~children: React.element,
+    ) => React.element = "Root"
+  }
+  module Indicator = {
+    @react.component @module("@radix-ui/react-checkbox")
+    external make: (
+      ~className: string=?,
+      ~asChild: bool=?,
+      ~fourceMount: bool=?,
+      ~children: React.element=?,
+    ) => React.element = "Indicator"
+  }
+}
+
+module Collapsible = {
+  module Root = {
+    @module("@radix-ui/react-collapsible") @react.component
+    external make: (
+      ~children: React.element=?,
+      ~_open: bool=?,
+      ~onOpenChange: bool => unit=?,
+      ~disabled: bool=?,
+      ~asChild: bool=?,
+      ~className: string=?,
+      ~defaultOpen: bool=?,
+    ) => React.element = "Root"
+  }
+
+  module Trigger = {
+    @module("@radix-ui/react-collapsible") @react.component
+    external make: (
+      ~children: React.element=?,
+      ~asChild: bool=?,
+      ~className: string=?,
+    ) => React.element = "Trigger"
+  }
+
+  module Content = {
+    @module("@radix-ui/react-collapsible") @react.component
+    external make: (
+      ~children: React.element=?,
+      ~forceMount: bool=?,
+      ~className: string=?,
     ) => React.element = "Content"
   }
 }
